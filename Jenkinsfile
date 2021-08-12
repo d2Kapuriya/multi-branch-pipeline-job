@@ -15,8 +15,8 @@ pipeline {
             steps{
                 withAWS(credentials: 'aws_credentials', region: 'ap-south-1') {
                     sh 'terraform plan'
-                    sh 'terraform apply --auto-approve'
-                    //sh 'terraform destroy --auto-approve'
+                    //sh 'terraform apply --auto-approve'
+                    sh 'terraform destroy --auto-approve'
                 }
             }
         }
